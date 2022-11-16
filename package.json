@@ -2,6 +2,10 @@
   "name": "my-webpack-project",
   "version": "1.0.0",
   "license": "MIT",
+  
+  "dependencies": {
+    "eslint": "^8.23.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
@@ -16,6 +20,9 @@
   },
   "description": "My webpack project",
   "scripts": {
+    
+    "eslint": "wrap () { eslint ./src/${1}; }; wrap",
+    "winlint": "eslint",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
