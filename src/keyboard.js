@@ -26,11 +26,7 @@ function isDeleteKey(key) {
 function isEnterKey(key) {
   return key.id === "enter";
 }
-function onDeleteKey() {
-  const slot = getSlotToDelete();
-  writeInSlot(slot, "");
-  selectSlot(slot);
-}
+
 function onEnterKey() {
   if (!isCompletedWord()) {
     alert("No hay suficientes letras");
@@ -75,7 +71,11 @@ function getSlotToDelete() {
   }
   return slot;
 }
-
+function onDeleteKey() {
+  const slot = getSlotToDelete();
+  writeInSlot(slot, "");
+  selectSlot(slot);
+}
 export function insertKey(event) {
   if (isDeleteKey(event.target)) {
     onDeleteKey();
