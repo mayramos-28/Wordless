@@ -10,7 +10,7 @@ export function existsWord(word) {
   return words.includes(word);
 }
 export function letterIsEqual(playWord, letter, index) {
-     return playWord[index].toLowerCase()===letter.toLowerCase();
+  return playWord[index].toLowerCase() === letter.toLowerCase();
 }
 export function letterInWord(playWord, letter) {
   return playWord.includes(letter.toLowerCase());

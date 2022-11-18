@@ -20,14 +20,7 @@ import {
 } from "./wordElement";
 import { playWord } from ".";
 
-function isDeleteKey(key) {
-  return key.id === "backspace";
-}
-function isEnterKey(key) {
-  return key.id === "enter";
-}
-
-function onEnterKey() {
+export function onEnterKey() {
   if (!isCompletedWord()) {
     alert("No hay suficientes letras");
     return;
@@ -58,6 +51,7 @@ function onEnterKey() {
 }
 
 function getSlotToDelete() {
+  console.log("delete function")
   const slot = getSelectedSlot();
   if (!slot) {
     return getLastSlot();
@@ -71,20 +65,13 @@ function getSlotToDelete() {
   }
   return slot;
 }
-function onDeleteKey() {
+export function onDeleteKey() {
   const slot = getSlotToDelete();
   writeInSlot(slot, "");
   selectSlot(slot);
 }
 export function insertKey(event) {
-  if (isDeleteKey(event.target)) {
-    onDeleteKey();
-    return;
-  }
-  if (isEnterKey(event.target)) {
-    onEnterKey();
-    return;
-  }
+
   let slot = getSelectedSlot();
   if (!slot) {
     return;
