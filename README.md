@@ -1,5 +1,9 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Welcome to Wordless project!
 
+# Wordless Game
+This project is a recreation of the popular word-guessing game "Wordless" using JavaScript, HTML, CSS, and bundled with Webpack.
+
+```
 This project has been created using **webpack-cli**, you can now run
 
 ```
